@@ -11,7 +11,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ru.geekbrains.android3_1.R;
-import ru.geekbrains.android3_1.model.CounterModel;
+import ru.geekbrains.android3_1.model.CounterModelRx;
 import ru.geekbrains.android3_1.presenter.MainPresenter;
 
 public class MainActivity extends MvpAppCompatActivity implements MainView {
@@ -36,7 +36,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
 
     @ProvidePresenter
     public MainPresenter provideMainPresenter() {
-        return new MainPresenter(new CounterModel());
+        return new MainPresenter(new CounterModelRx());
     }
 
     @OnClick(R.id.btn_one)
